@@ -70,7 +70,8 @@ a{
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
     color: #7C5CFC;
 }
 
@@ -113,14 +114,6 @@ li{
     margin: 0 auto;
 }
 
-.rectangle{
-    background: #879097;
-    border-radius: 24px;
-    width: 80px;
-    height: 4px;
-    margin: -20px auto 0 auto;
-}
-
 header{      
     padding: 24px 0 ;  
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);  
@@ -136,10 +129,6 @@ header>div{
     padding: 0 20px;
 }
 
-.bg_header{
-    padding-top: 30px;
-}
-
 header button:nth-of-type(1){
     margin-left: auto; 
 }
@@ -150,9 +139,11 @@ header button:nth-of-type(1){
 
 .header_img img{
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 392px;
-    object-position: 50% 50%; 
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%; 
     border-radius: 30px;
 }
 
@@ -163,14 +154,12 @@ header button:nth-of-type(1){
 
 .img_100 img{
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 316px;
-    object-position: 50% 50%;    
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;    
     border-radius: 50px;
-}
-
-.table2_ms{
-    display: none;
 }
 
 .table{
@@ -204,6 +193,10 @@ header button:nth-of-type(1){
     display: none;
 }
 
+.table2_ms{
+    display: none;
+}
+
 footer{    
     padding: 45px 0;
     margin-top: 25px;
@@ -214,13 +207,6 @@ footer>p{
     text-align: center;
 }
 
-@media screen and (max-width:1200px) {
-    .header_img{
-        width: 100%;
-        margin-left: 0;
-    }
-}
-
 @media screen and (max-width:989px) {
     body{
         background-image: none;
@@ -229,19 +215,20 @@ footer>p{
 
 @media screen and (max-width:649px) {
 
-    header>div{      
-        flex-direction: column;
-        gap: 30px;
+    body{
+        background-image: none;
     }
 
     header{      
         border-bottom: none;
         padding: 38px 0 0 0;
+        flex-direction: column;        
     }
 
-    .bg_header{
-        padding-top: 40px;
-    }
+    header>div{      
+        flex-direction: column;
+        gap: 30px;
+    }       
 
     header button:nth-of-type(1) {
         margin-left: 0;        
@@ -249,16 +236,7 @@ footer>p{
 
     .btn_entrance{
         width: 160px;
-    }
-
-    header{
-        flex-direction: column;
-        margin: 0px 50px 0px 50px;
-    }    
-
-    .header_div>h1, .header_div>nav{
-        order:-1;
-    }
+    }           
 
     .header_img{
         margin: 30px 0 0 0 ;
@@ -267,15 +245,7 @@ footer>p{
 
     .header_img img{        
         height: 200px;
-    }
-
-    .rectangle{
-        display: none;
-    }
-
-    body{
-       background-image: none;
-    }
+    } 
 
     ul,ol{
         margin: 30px 0;
@@ -301,17 +271,14 @@ footer>p{
         margin: 30px 0;
     }
 
-    nav a{    
-        color: #fff;       
+    p{
+        margin: 30px 0;
     }
 
-    .bg_header{
-        background-image: none;                  
+    .table{
+        margin: 30px 0;
+        padding: 24px 11px;
     }
-    
-    .bg_footer{
-        background-image: none;         
-    }    
 
     .table tr{
         flex-wrap: wrap;        
@@ -324,27 +291,7 @@ footer>p{
 
     .table td:nth-of-type(even){
         text-align: right;
-    }   
-
-    .table td:nth-of-type(even){
-        text-align: right;
-    } 
-
-    p{
-        margin: 30px 0;
     }
-
-    footer{
-        padding: 0;
-    }    
-
-   .img_100{
-    display: none;
-   }
-
-   .table{
-    margin: 30px 0;
-   }
 
    .table_ms{
     display: table;
@@ -362,6 +309,10 @@ footer>p{
     .table2_ms td:nth-of-type(even){
         text-align: left;        
     }
+
+    footer{
+        padding: 0;
+    }    
 }
 
 
